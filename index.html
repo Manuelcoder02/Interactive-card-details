@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <title>Frontend Mentor | Interactive card details form</title>
+  </head>
+  <body>
+    <main id="wrapper">
+      <div class="landing-page">
+        <div class="hero">
+          <img
+            src="./images/bg-main-mobile.png"
+            alt="rectangle shape with gradient color"
+            class="bg-mobile"
+          />
+          <img
+            src="./images/bg-main-desktop.png"
+            alt="rectangle shape with gradient color"
+            class="bg-desktop"
+          />
+        </div>
+        <div class="cards">
+          <div class="back-card">
+            <div class="container">
+              <img
+                src="./images/bg-card-back.png"
+                alt="atm card backview"
+                class="card-back"
+              />
+              <p class="back-card-text">000</p>
+            </div>
+          </div>
+          <div class="front-card">
+            <div class="container">
+              <img
+                src="./images/bg-card-front.png"
+                alt="atm card frontview"
+                class="card-front"
+              />
+              <div class="container">
+                <div class="card-logo">
+                  <img src="./images/card-logo.svg" alt="" />
+                </div>
+                <div class="front-card-texts">
+                  <p class="show-card-number">0000 0000 0000 0000</p>
+                  <div class="sub-front-card-texts">
+                    <p class="show-card-name">Jane Appleseed</p>
+                    <p class="show-expiry-date">
+                      <span class="mm">00</span>/<span class="yy">00</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="form">
+        <div class="container">
+          <div class="cardholder-name">
+            <p class="cardholder-name-label">Cardholder Name</p>
+            <input
+              type="text"
+              name="cardholder-name"
+              class="cardholder-name-input"
+              placeholder="e.g. Jane Appleseed"
+            />
+            <p class="error card-name-err hidden">Wrong format, name only</p>
+          </div>
+          <div class="card-number">
+            <p class="card-number-label">Card Number</p>
+            <input
+              type="number"
+              name="card-number"
+              class="card-number-input"
+              placeholder="e.g. 1234 5678 9123 0000"
+            />
+            <p class="error card-number-err hidden">
+              Wrong format, numbers only
+            </p>
+          </div>
+          <div class="other-form-input">
+            <div class="expiry">
+              <p class="expiry-label">Exp. Date (MM/YY)</p>
+              <div class="row">
+                <input
+                  type="number"
+                  name="month expiry"
+                  class="expiry-date__month"
+                  placeholder="MM"
+                  maxlength="2"
+                />
+                <input
+                  type="number"
+                  name="year expiry"
+                  class="expiry-date__year"
+                  placeholder="YY"
+                />
+              </div>
+              <p class="error expiry-err hidden">Can't be blank</p>
+            </div>
+            <div class="cvc">
+              <p class="cvc-label">CVC</p>
+              <input
+                type="number"
+                name="cvc"
+                class="cvc-input"
+                placeholder="e.g. 123"
+                maxlength="3"
+              />
+              <p class="error cvc-err hidden">Can't be blank</p>
+            </div>
+          </div>
+          <div class="confirm">
+            <button type="submit" class="btn-confirm">Confirm</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Completed state start -->
+      <section class="completed-state hidden">
+        <div class="container">
+          <div class="checkmark-img">
+            <img src="./images/icon-complete.svg" alt="" />
+          </div>
+          <h1 class="thank">Thank you!</h1>
+          <p class="added">We've added your card details</p>
+          <button type="submit" class="btn-continue">Continue</button>
+        </div>
+      </section>
+    </main>
+    <div class="attribution">
+      <div class="container">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Sotunde Emmanuel Adefenwa</a>.
+      </div>
+    </div>
+    <script src="./assets/js/script.js"></script>
+  </body>
+</html>
